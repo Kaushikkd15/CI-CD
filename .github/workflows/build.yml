@@ -15,8 +15,11 @@ jobs:
           with: 
              node-version: '20'
 
-         - name: install dependencies
+         - name: Install dependencies
            run:  npm install
+
+         - name: Generate prisma client
+           run:  npm run db:generate
 
          - name: run build
            run:  npm run build     
